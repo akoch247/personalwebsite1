@@ -1,0 +1,31 @@
+{
+  "name": "personalwebsite1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akoch247/personalwebsite1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akoch247/personalwebsite1/issues"
+  },
+  "homepage": "https://github.com/akoch247/personalwebsite1#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^7.0.4"
+  }
+}
