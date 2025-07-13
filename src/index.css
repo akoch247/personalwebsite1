@@ -1,3 +1,17 @@
+/* Reset default spacing */
+* {
+    margin: 0; /* Eliminate the whitespace around the body and all other elements */
+    padding: 0; /* Eliminate the whitespace around the body and all other elements */
+    box-sizing: border-box; /* Makes the width/height calculations more predictable */
+}
+
+/* Full project styling */
+body {
+    width: 100%; /* Ensures nothing is narrower than the screen */
+    height: 100%; /* Ensures content can grow to fill the whole height of the screen */
+    font-family: sans-serif; /* Gives the whole site a modern clean font */
+}
+
 /* Navbar container */
 #navbar {
     display: flex; /* Lays out child elements in a row, side by side (#brand and #nav-links */
