@@ -57,6 +57,7 @@ body {
 }
 
 #nav-links a:hover {
-    color: #ffcc00 /* The transition from earlier makes it smooth, not instant */
+    color: 1e1e1e; /* The transition from earlier makes it smooth, not instant */
+    text-decoration: underline; /* Adds underline to whatever user can click */
 }
 
