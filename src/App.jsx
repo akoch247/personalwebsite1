@@ -6,6 +6,8 @@ import Home from "./home/Home.jsx";
 import About from "./about/About.jsx";
 import Projects from "./projects/Projects.jsx";
 import Contact from "./contact/Contact.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function App() {
     return (
