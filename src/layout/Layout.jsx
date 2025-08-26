@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 import DarkVeil from "./DarkVeil";
+import "./Layout.css";
 
 export default function Layout() {
     return (
@@ -17,18 +18,13 @@ export default function Layout() {
                 <DarkVeil />
             </div>
 
-            <div className="make-pot-container rounded p-4" 
-                    style={{
-                        width: "100%",
-                        maxWidth: "1200px",
-                        margin: "50px auto",
-                        minHeight: "600px",
-                        backgroundColor: "#4B0082",
-                    }}>
-                <Navbar />
-                <main className="mt-3">
-                    <Outlet />
-                </main>
+            <div className="container py-5">
+                <div className="card custom-card text-light shadow-lg rounded-4 p-4 border-0">
+                    <Navbar />
+                    <main className="mt-4">
+                        <Outlet />
+                    </main>
+                </div>
             </div>
         </div>
     );
