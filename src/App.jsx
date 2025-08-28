@@ -7,7 +7,7 @@ import About from "./about/About.jsx";
 import Projects from "./projects/Projects.jsx";
 import Contact from "./contact/Contact.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Skills from "./skills/Skills.jsx";
 
 export default function App() {
     return (
@@ -18,6 +18,7 @@ export default function App() {
                 <Route path="/About" element={<About />} />
                 <Route path="/Projects" element={<Projects />} />
                 <Route path="/Contact" element={<Contact />} />
+                <Route path="/Skills" element={<Skills />} />
                 <Route path="*" element={<Error404 />} />
             </Route>
         </Routes>
