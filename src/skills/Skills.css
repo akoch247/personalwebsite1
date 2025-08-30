@@ -1,0 +1,25 @@
+.skill-card {
+    background: rgba(255, 255, 255, 0.05); /* glass effect */
+    transition: all 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    box-shadow: 0 8px 25px rgba(64, 121, 255, 0.4);
+    border-color: #40ffaa;
+  }
+  
+  .icon-wrapper {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1px solid #4079ff;
+    background: transparent; /* no gray fill */
+  }
+  
+  .icon-wrapper img {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+  }
