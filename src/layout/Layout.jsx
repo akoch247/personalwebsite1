@@ -18,8 +18,8 @@ export default function Layout() {
                 <DarkVeil />
             </div>
 
-            <div className="container py-5">
-                <div className="card custom-card text-light shadow-lg rounded-4 p-4 border-0">
+            <div className="container-fluid d-flex justify-content-center align-items-center py-5">
+                <div className="card custom-card text-light shadow-lg rounded-4 p-5 border-0 w-90">
                     <Navbar />
                     <main className="mt-4">
                         <Outlet />
