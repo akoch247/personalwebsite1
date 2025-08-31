@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-transparent px-0">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             {/* Brand */}
             <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
                 <img 

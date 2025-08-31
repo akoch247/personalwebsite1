@@ -1,24 +1,24 @@
 .custom-card {
-    /* Gradient background */
-    background: radial-gradient(circle at top left, #0a0a2e, #050517 70%);
-    /* Simulated stars */
-    position: relative;
-    overflow: hidden;
-    width: 90vw;
-    min-height: 90vh;
-  }
-  
-  .custom-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
-    opacity: 0.3;
-    z-index: 0;
-  }
-  
-  .custom-card > * {
-    position: relative;
-    z-index: 1; /* keep navbar + content above stars */
+  /* Gradient background */
+  background: radial-gradient(circle at top left, #00000f, #000010 70%);
+  /* Simulated stars */
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
+  min-height: 90vh;
+}
 
-  }
+.custom-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.custom-card > * {
+  position: relative;
+  z-index: 1; /* keep navbar + content above stars */
+
+}

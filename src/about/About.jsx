@@ -11,7 +11,7 @@ export default function About() {
                 className="mt-5 mt-lg-0"
             >
                 <img 
-                    src="/laptop-illustration.png" 
+                    src="/Adrianakoch.jpg" 
                     alt="Laptop Illustration" 
                     className="img-fluid"
                     style={{ maxWidth: "450px" }}
