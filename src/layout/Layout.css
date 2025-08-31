@@ -1,11 +1,30 @@
 .custom-card {
   /* Gradient background */
-  background: radial-gradient(circle at top left, #00000f, #000010 70%);
+  background: radial-gradient(circle at top left, #000029, #000010 70%);
   /* Simulated stars */
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   width: 90vw;
   min-height: 90vh;
+  box-shadow: 
+  0 0 20px rgba(29, 23, 115, 0.6),
+  0 0 40px rgba(29, 23, 115, 0.4),
+  0 0 60px rgba(29, 23, 115, 0.2);
+animation: pulseGlow 3s infinite alternate;
+}
+@keyframes pulseGlow {
+  from {
+    box-shadow: 
+      0 0 15px rgba(29, 23, 115, 0.5),
+      0 0 30px rgba(29, 23, 115, 0.3),
+      0 0 45px rgba(29, 23, 115, 0.2);
+  }
+  to {
+    box-shadow: 
+      0 0 40px rgba(29, 23, 115, 0.9),
+      0 0 80px rgba(29, 23, 115, 0.6),
+      0 0 120px rgba(29, 23, 115, 0.4);
+  }
 }
 
 .custom-card::before {
@@ -20,5 +39,11 @@
 .custom-card > * {
   position: relative;
   z-index: 1; /* keep navbar + content above stars */
-
+}
+.layout-background {
+  min-height: 100vh;
+  background-color: #02022f;
+  background-attachment: fixed;  /* stays put while scrolling */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
