@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "./About.css";
 
 export default function About() {
     return (
@@ -13,8 +14,8 @@ export default function About() {
                 <img 
                     src="/Adrianakoch.jpg" 
                     alt="Laptop Illustration" 
-                    className="img-fluid"
-                    style={{ maxWidth: "450px" }}
+                    className="img-fluid rounded-circle"
+                    style={{ maxWidth: "350px" }}
                 />
             </motion.div>
 

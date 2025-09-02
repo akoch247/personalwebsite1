@@ -5,21 +5,27 @@
   
   .skill-card:hover {
     box-shadow: 0 8px 25px rgba(64, 121, 255, 0.4);
-    border-color: #40ffaa;
   }
   
   .icon-wrapper {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 0.1px solid #4079ff;
     background: transparent; /* no gray fill */
+    margin: 0 auto;
   }
   
   .icon-wrapper img {
-    width: 145px;
-    height: 145px;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
   }
+
+@media (max-width: 576px) {
+  .icon-wrapper {
+    max-width: 90px;
+  }
+}

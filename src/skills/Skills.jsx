@@ -16,7 +16,7 @@ export default function Skills() {
       ];
 
     return (
-        <div className="container mt-4 text-center text-white">
+        <div className="container mt-4 mb-5 text-center text-white">
             <motion.div
                 initial= {{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -40,11 +40,11 @@ export default function Skills() {
                     {skills.map((skill, i) => (
                         <motion.div
                             key={i} 
-                            className="col-1 col-md-3"
+                            className="col-6 col-sm-4 col-md-3 col-lg-2"
                             whileHover={{ scale: 1.05 }}
                             transition={{ type: "spring", stiffness: 200 }}
                         >
-                            <div className="card shadow-none bg-transparent">
+                            <div className="card skill-card shadow-none bg-transparent">
                                 <div className="card-body d-flex flex-column align-items-center">
                                     <div className="icon-wrapper rounded-2">
                                         <img 

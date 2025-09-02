@@ -1,0 +1,35 @@
+.contact-card {
+    background: radial-gradient(circle at top left, #000029, #000010 70%);
+    border: 0.1px solid #4079ff;
+}
+
+::placeholder {
+    color: white !important;
+    opacity: 1; /* ensures it's not faded */
+}
+
+.custom-input {
+    background-color: #1a1a2e; 
+    border: 0.1px solid #4079ff;
+}
+
+.card .form-control {
+    background-color: #1a1a2e;
+    color: white;
+    border: 0.1px solid #444;
+}
+
+/* Autofill background override */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a2e inset !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white; /* keeps typing cursor visible */
+}
+
+/* Keep autofill consistent when focused */
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a2e inset !important;
+  -webkit-text-fill-color: white !important;
+}
