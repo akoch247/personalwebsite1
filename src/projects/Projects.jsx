@@ -1,27 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./Projects.css"; // import your custom CSS
+import { Link } from "react-router-dom";
+import "./Projects.css";
 
 export default function Projects() {
   const projects = [
     {
+      slug: "portfolio-website",
       name: "Portfolio Website",
       description:
         "My personal website with an overview of my skills and projects",
+      fullDescription:
+        "This is a detailed write-up about the portfolio website project. It covers the design, development process, challenges, and future improvements.",
       techStack: ["HTML", "CSS", "JS", "React", "Bootstrap"],
       icon: "portfolio.png",
     },
     {
+      slug: "ecommerce-platform",
       name: "Ecommerce Social Media Platform",
       description:
         "A full-featured ecommerce platform with social media integration",
+      fullDescription:
+        "This ecommerce project integrates shopping features with social media-like functionality. Built with React, Bootstrap, Express, and Postgres. Includes mapping features via Mapbox.",
       techStack: ["React", "Bootstrap", "Express", "Postgres", "Mapbox"],
       icon: "ecommerce.png",
     },
     {
+      slug: "fitness-app",
       name: "Fitness App",
       description:
         "A fitness tracking app with exercise routines and diet plans",
+      fullDescription:
+        "The fitness app lets users create personalized workout plans, track exercises, and manage diet goals. Built with React Native, Expo, and Firebase for real-time syncing.",
       techStack: ["React Native", "Expo", "Firebase"],
       icon: "fitness.png",
     },
@@ -29,10 +39,7 @@ export default function Projects() {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   const cardVariants = {
@@ -53,9 +60,6 @@ export default function Projects() {
         <p className="lead text-white">
           Some of the projects I've built over the years.
         </p>
-        <a href="/Projects" className="btn btn-primary btn-lg mt-3 shadow">
-          View All Projects
-        </a>
       </motion.div>
 
       {/* Project Grid */}
@@ -74,28 +78,36 @@ export default function Projects() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <div className="project-card card h-100 text-center text-white border-0">
-                <div className="card-body d-flex flex-column align-items-center">
-                  <div className="icon-wrapper mb-3">
-                    <img
-                      src={project.icon}
-                      alt={project.name}
-                      className="project-icon"
-                    />
-                  </div>
-                  <h5 className="card-title fw-bold">{project.name}</h5>
-                  <p className="card-text text-white small">
-                    {project.description}
-                  </p>
-                  <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
-                    {project.techStack.map((tech, index) => (
-                      <span key={index} className="tech-badge badge rounded-pill">
-                        {tech}
-                      </span>
-                    ))}
+              <Link
+                to={`/projects/${project.slug}`}
+                className="text-decoration-none"
+              >
+                <div className="project-card card h-100 text-center text-white border-0">
+                  <div className="card-body d-flex flex-column align-items-center">
+                    <div className="icon-wrapper mb-3">
+                      <img
+                        src={project.icon}
+                        alt={project.name}
+                        className="project-icon"
+                      />
+                    </div>
+                    <h5 className="card-title fw-bold">{project.name}</h5>
+                    <p className="card-text text-white small">
+                      {project.description}
+                    </p>
+                    <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                      {project.techStack.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="tech-badge badge rounded-pill"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
