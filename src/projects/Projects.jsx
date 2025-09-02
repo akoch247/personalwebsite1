@@ -22,17 +22,17 @@ export default function Projects() {
         "A full-featured ecommerce platform with social media integration",
       fullDescription:
         "This ecommerce project integrates shopping features with social media-like functionality. Built with React, Bootstrap, Express, and Postgres. Includes mapping features via Mapbox.",
-      techStack: ["React", "Bootstrap", "Express", "Postgres", "Mapbox"],
+      techStack: ["React", "Bootstrap", "Express", "Postgres", "Mapbox", "SQL"],
       icon: "ecommerce.png",
     },
     {
-      slug: "fitness-app",
-      name: "Fitness App",
+      slug: "audio-analysis-program",
+      name: "Audio Analysis Visualization Program",
       description:
-        "A fitness tracking app with exercise routines and diet plans",
+        "A audio processing program displayed through a spectrogram visualization",
       fullDescription:
-        "The fitness app lets users create personalized workout plans, track exercises, and manage diet goals. Built with React Native, Expo, and Firebase for real-time syncing.",
-      techStack: ["React Native", "Expo", "Firebase"],
+        "This audio processing project analyzes and manipulates sound using Fourier Transforms. Built with Rust, RustFFT, Rodio, and Slint. Features include real-time spectrogram visualization and interactive effects controls via a GUI.",
+      techStack: ["Rust", "Slint", "Git"],
       icon: "fitness.png",
     },
   ];
