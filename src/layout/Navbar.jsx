@@ -47,9 +47,6 @@ export default function Navbar() {
                         <Link className="nav-link" to="/Projects">Projects</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/Experience">Experience</Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className="nav-link" to="/Contact">Contact</Link>
                     </li>
                 </ul>

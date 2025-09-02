@@ -16,7 +16,7 @@ export default function Skills() {
       ];
 
     return (
-        <div className="container py-5 text-center text-white">
+        <div className="container mt-4 text-center text-white">
             <motion.div
                 initial= {{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
