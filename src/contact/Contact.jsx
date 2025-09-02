@@ -12,26 +12,29 @@ export default function Contact() {
             <h1 className="d-flex justify-content-center align-items-center mt-4">
                 Contact<br />
             </h1>
-            <p className="lead d-flex justify-content-center">
+            <p className="lead d-flex justify-content-center pb-2">
             I'm seeking opportunities to apply my skills to mission-driven projects—full-time, contract, or freelance.   
             </p>
-            <form>
-                <div className="mb-3">
-                    <label for="name" className="form-label">Name</label>
-                    <input type="text" className="form-control" id="name" placeholder="Enter your name"/>
-                </div>
-                <div className="mb-3">
-                    <label for="email" className="form-label">Email</label>
-                    <input type="email" className="form-control" id="email" placeholder="Enter your email" />
-                </div>
-                <div className="mb-3">
-                    <label for="message" className="form-label">Message</label>
-                    <textarea className="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">
-                 Send
-                </button>
-            </form>
+
+            <div className="d-flex justify-content-center mt-5">
+                <form className="card text-start p-4 w-50">
+                    <div className="mb-3">
+                        <label for="name" className="form-label">Name</label>
+                        <input type="text" className="form-control" id="name" placeholder="Enter your name"/>
+                    </div>
+                    <div className="mb-3">
+                        <label for="email" className="form-label">Email</label>
+                        <input type="email" className="form-control" id="email" placeholder="Enter your email" />
+                    </div>
+                    <div className="mb-3">
+                        <label for="message" className="form-label">Message</label>
+                        <textarea className="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-primary">
+                    Send
+                    </button>
+                </form>
+            </div>
             </motion.div>
         </div>
     );
