@@ -3,16 +3,39 @@ import { motion } from "framer-motion";
 import "./Gradient.css";
 import GradientText from "./Gradient";
 import "./Skills.css";
+import { BsBootstrap } from "react-icons/bs";
+import { FaReact } from "react-icons/fa";
+import { DiJavascript } from "react-icons/di";
+import { TbHtml } from "react-icons/tb";
+import { MdOutlineCss } from "react-icons/md";
+import { FaNode } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { TbBrandTailwind } from "react-icons/tb";
+import { TbSql } from "react-icons/tb";
+import { FaRust } from "react-icons/fa";
+import { SiEslint } from "react-icons/si";
+import { RiJavaLine } from "react-icons/ri";
+import { FaGit } from "react-icons/fa";
+import { FaFigma } from "react-icons/fa";
 
-
-export default function Skills() {
+export default function Skills() { 
     const skills = [
-        { name: "HTML", icon: "/html.png" },
-        { name: "CSS", icon: "/css.png" },
-        { name: "JavaScript", icon: "/js.png" },
-        { name: "React", icon: "/react.png" },
-        { name: "Node.js", icon: "/nodejs.png" },
-        { name: "Express", icon: "/expressjs.png" },
+        { name: "Boostrap", icon: BsBootstrap },
+        { name: "React", icon: FaReact },
+        { name: "Javascript", icon: DiJavascript },
+        { name: "HTML", icon: TbHtml },
+        { name: "CSS", icon: MdOutlineCss },
+        { name: "Node.js", icon: FaNode },
+        { name: "Express", icon: SiExpress },
+        { name: "Postgres", icon: BiLogoPostgresql },
+        { name: "Tailwind", icon: TbBrandTailwind },
+        { name: "SQL", icon: TbSql },
+        { name: "Rust", icon: FaRust },
+        { name: "Slint", icon: SiEslint },
+        { name: "Java", icon: RiJavaLine },
+        { name: "Git", icon: FaGit },
+        { name: "Figma", icon: FaFigma },
       ];
 
     return (
@@ -36,7 +59,7 @@ export default function Skills() {
                     Here is the list of my technical skills that I have acquired in my career as a Full Stack Developer.
                 </p>
 
-                <div className="row g-1 justify-content-center">
+                <div className="row g-3 justify-content-center">
                     {skills.map((skill, i) => (
                         <motion.div
                             key={i} 
@@ -45,14 +68,15 @@ export default function Skills() {
                             transition={{ type: "spring", stiffness: 200 }}
                         >
                             <div className="card skill-card shadow-none bg-transparent">
-                                <div className="card-body d-flex flex-column align-items-center">
+                                <div className=" card-body d-flex flex-column align-items-center">
                                     <div className="icon-wrapper rounded-2">
-                                        <img 
-                                            src={skill.icon} 
-                                            alt={skill.name} 
-                                        />
-                                    </div>
-                                </div>
+                                        {typeof skill.icon === "string" ? (
+                                            <img src={skill.icon} alt={skill.name} />
+                                        ) : (
+                                            <skill.icon size={80} color="#034df9" />
+                                        )}
+                                    </div> 
+                                </div>      
                             </div>
                         </motion.div>
                     ))}
