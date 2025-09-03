@@ -37,13 +37,30 @@ export default function Skills() {
         { name: "Git", icon: FaGit },
         { name: "Figma", icon: FaFigma },
       ];
+    
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+            },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 30 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    };
+    
 
     return (
         <div className="container mt-4 mb-5 text-center text-white">
             <motion.div
-                initial= {{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.1 }}
+                initial= "hidden"
+                animate= "show"
+                variants= {container}
             >
                 <h2 className="fw-bold display-4 mb-3">
                     <GradientText
@@ -59,13 +76,16 @@ export default function Skills() {
                     Here is the list of my technical skills that I have acquired in my career as a Full Stack Developer.
                 </p>
 
-                <div className="row g-3 justify-content-center">
+                <motion.div 
+                    className="row g-3 justify-content-center"
+                    variants={container}
+                    >
                     {skills.map((skill, i) => (
                         <motion.div
                             key={i} 
                             className="col-6 col-sm-4 col-md-3 col-lg-2"
+                            variants={item}
                             whileHover={{ scale: 1.05 }}
-                            transition={{ type: "spring", stiffness: 200 }}
                         >
                             <div className="card skill-card shadow-none bg-transparent">
                                 <div className=" card-body d-flex flex-column align-items-center">
@@ -80,7 +100,7 @@ export default function Skills() {
                             </div>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </motion.div>
         </div>
     );
