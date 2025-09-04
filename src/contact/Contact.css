@@ -36,6 +36,13 @@ textarea:-webkit-autofill:focus {
 
 /* On very small screens */
 @media (max-width: 576px) {
+  .responsive-form {
+    margin: 0 1rem;
+    max-width: 100%;
+  }
+  .responsive-form button {
+    width: 100%;
+  }
   .contact-card {
     padding: 1.5rem !important;
     margin: 0 1rem;  
@@ -52,7 +59,16 @@ textarea:-webkit-autofill:focus {
 
 /* Tablets */
 @media (min-width: 577px) and (max-width: 991px) {
+  .responsive-form {
+    max-width: 600px;
+  }
   .contact-card {
     width: 80% !important;
   }
+}
+
+.responsive-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
