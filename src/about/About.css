@@ -1,4 +1,25 @@
-.img {
+.about-img {
     border: 0.1px solid #4079ff;
-    
+    max-width: 350px;
+    height: auto;
 }
+
+/* Tablets */
+@media (max-width: 991px) {
+    .about-img {
+      max-width: 280px;
+    }
+  }
+  
+  /* Phones */
+  @media (max-width: 576px) {
+    .about-img {
+      max-width: 180px;
+      margin: 0 auto 1.5rem auto;
+      display: block;
+    }
+    .about-buttons {
+        margin-bottom: 2rem;
+    }
+
+  }

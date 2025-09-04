@@ -4,18 +4,18 @@ import "./About.css";
 
 export default function About() {
     return (
-        <div className="d-flex flex-column flex-lg-row align-items-start justify-content-between">
+        <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between">
             <motion.div 
                 initial={{ opacity: 0, x: -30 }} 
                 animate={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="mt-5 mt-lg-0"
+                className="mt-5 mt-lg-0 text-center text-lg-start"
             >
                 <img 
                     src="/Adrianakoch.jpg" 
                     alt="Laptop Illustration" 
-                    className="img-fluid rounded-circle"
-                    style={{ maxWidth: "350px" }}
+                    className="img-fluid rounded-circle mx-aut0 mx-lg-0"
+                    style={{ maxWidth: "320px" }}
                 />
             </motion.div>
 
@@ -23,9 +23,9 @@ export default function About() {
                 initial={{ opacity: 0, x: 30 }} 
                 animate={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.7 }}
-                className="text-center text-lg-start"
+                className="text-center text-lg-start mt-4 mt-lg-0"
             >
-                <h1 className="display-5 text-center">
+                <h1 className="display-5 text-center text-lg-start">
                     About Me<br />
                 </h1>
                 <p className="mt-3 p-4">
@@ -42,7 +42,7 @@ export default function About() {
                     I can bring both artistry and technical expertise to meaningful projects.
                     Let's connect if that vision speaks to you.
                 </p>
-                <div className="mt-4 d-flex flex-column flex-sm-row gap-4 justify-content-center">
+                <div className="mt-4 d-flex flex-column flex-sm-row gap-4 justify-content-center justify-content-lg-start about-buttons">
                     <a 
                         href="/AdrianaKoch_Resume (3).pdf"
                         target="_blank"
