@@ -28,7 +28,7 @@ export default function ProjectDetails() {
       icon: TiSocialInstagram,
     },
     "audio-analysis-program": {
-      name: "Audio Analysis Visualiztion Program",
+      name: "Audio Analysis Visualization Program",
       fullDescription:
         "This audio processing project analyzes and manipulates sound using Fourier Transforms. Built with Rust, RustFFT, Rodio, and Slint. Features include real-time spectrogram visualization and interactive effects controls via a GUI.",
       techStack: ["Rust", "Slint", "Git"],
