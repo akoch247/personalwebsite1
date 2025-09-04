@@ -5,7 +5,7 @@
 
 ::placeholder {
     color: white !important;
-    opacity: 1; /* ensures it's not faded */
+    opacity: 1; 
 }
 
 .custom-input {
@@ -19,7 +19,7 @@
     border: 0.1px solid #444;
 }
 
-/* Autofill background override */
+
 input:-webkit-autofill,
 textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #1a1a2e inset !important;
@@ -27,9 +27,32 @@ textarea:-webkit-autofill {
   caret-color: white; /* keeps typing cursor visible */
 }
 
-/* Keep autofill consistent when focused */
+
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #1a1a2e inset !important;
   -webkit-text-fill-color: white !important;
+}
+
+/* On very small screens */
+@media (max-width: 576px) {
+  .contact-card {
+    padding: 1.5rem !important;
+    margin: 0 1rem;  
+  }
+
+  .contact-card .form-control {
+    font-size: 0.9rem; 
+  }
+
+  .contact-card button {
+    width: 100%; 
+  }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 991px) {
+  .contact-card {
+    width: 80% !important;
+  }
 }

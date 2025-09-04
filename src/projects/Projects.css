@@ -1,10 +1,10 @@
-/* Background for whole section */
+
 .projects-section {
     background: linear-gradient(to bottom, #000029, #000010);
     min-height: 100vh;
   }
   
-  /* Project cards */
+ 
   .project-card {
     background-color: #0a0a2a;
     border-radius: 1rem;
@@ -16,7 +16,7 @@
     box-shadow: 0 0 30px rgba(29, 23, 115, 0.6);
   }
   
-  /* Project icons */
+
   .project-icon {
     width: 50px;
     height: 50px;
@@ -27,7 +27,7 @@
     background: transparent !important;
   }
   
-  /* Tech badges */
+
   .tech-badge {
     background-color: #111132;
     border: 1px solid #333366;

@@ -72,7 +72,7 @@ export default function Contact() {
             </p>
 
             <div className="d-flex justify-content-center mt-5 mb-5">
-                <form className="card contact-card text-start p-4 w-50 rounded-4 text-white" onSubmit={handleSubmit}>
+                <form className="card contact-card text-start p-4 w-100 w-md-75 w-lg-50 rounded-4 text-white" onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label for="name" className="form-label">Name</label>
                         <input 
