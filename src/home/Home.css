@@ -1,23 +1,57 @@
 .computer-img {
-    filter: 
-      drop-shadow(0 0 20px rgba(64, 121, 255, 0.8))   /* main glow */
-      drop-shadow(0 0 90px rgba(64, 121, 255, 0.5))   /* softer outer glow */
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  filter: 
+    drop-shadow(0 0 20px rgba(64, 121, 255, 0.8))   /* main glow */
+    drop-shadow(0 0 90px rgba(64, 121, 255, 0.5))   /* softer outer glow */
 
-  }
-
-/* Make image move closer to text on large screens */
-@media (min-width: 992px) {
-  .overlap-img {
-      margin-left: -50px; /* adjust to get desired spacing */
-  }
 }
 
-/* Optional: slightly scale down on smaller screens for better fit */
-@media (max-width: 991px) {
-  .overlap-img img {
-      max-width: 90%;
+
+@media (max-width: 576px) {
+  h1.display-5 {
+      font-size: 1.8rem;
+      margin-top: 2rem
+  }
+  p.lead {
+    font-size: 1rem;
+  }
+  .btn-lh {
+    padding: 0.5 rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .computer-img {
+    max-width: 180px;
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .d-flex {
+    align-items: center;
+    text-align: center;
   }
 }
 .contact-btn {
   border: 0.1px solid #4079ff;
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  h1.display-5 {
+      font-size: 2rem;
+  }
+
+  p.lead {
+      font-size: 1.1rem;
+  }
+
+  .computer-img {
+      max-width: 180px;
+      margin-top: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
 }

@@ -19,8 +19,8 @@ export default function Home() {
                     Building seamless digital experiences <br />
                     from backend to frontend.
                 </p>
-                <div className="mt-4">
-                    <a href="/Projects" className="btn btn-primary btn-lg me-2">View Projects</a>
+                <div className="mt-4 d-flex flex-column flex-sm-row align-items-center">
+                    <a href="/Projects" className="btn btn-primary btn-lg me-sm-2 mb-2 mb-sm-0">View Projects</a>
                     <a href="/Contact" className="btn btn-outline-light btn-lg contact-btn">Contact Me</a>
                 </div>
             </motion.div>
