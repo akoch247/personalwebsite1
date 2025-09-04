@@ -14,7 +14,7 @@ export default function ProjectDetails() {
       fullDescription:
         "This is a detailed write-up about the portfolio website project. It covers the design, development process, challenges, and future improvements.",
       techStack: ["HTML", "CSS", "JS", "React", "Bootstrap"],
-      liveDemo: "http://localhost:5173/",
+      liveDemo: "https://adrianakoch.netlify.app/",
       github: "https://github.com/akoch247/personalwebsite1",
       icon: MdComputer,
     },
