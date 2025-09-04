@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./Projects.css";
+import { LuAudioLines } from "react-icons/lu";
+import { MdComputer } from "react-icons/md";
+import { TiSocialInstagram } from "react-icons/ti";
 
 export default function Projects() {
   const projects = [
@@ -13,7 +16,9 @@ export default function Projects() {
       fullDescription:
         "This is a detailed write-up about the portfolio website project. It covers the design, development process, challenges, and future improvements.",
       techStack: ["HTML", "CSS", "JS", "React", "Bootstrap"],
-      icon: "portfolio.png",
+      liveDemo: "http://localhost:5173/",
+      github: "https://github.com/akoch247/personalwebsite1",
+      icon: MdComputer,
     },
     {
       slug: "ecommerce-platform",
@@ -23,7 +28,9 @@ export default function Projects() {
       fullDescription:
         "This ecommerce project integrates shopping features with social media-like functionality. Built with React, Bootstrap, Express, and Postgres. Includes mapping features via Mapbox.",
       techStack: ["React", "Bootstrap", "Express", "Postgres", "Mapbox", "SQL"],
-      icon: "ecommerce.png",
+      liveDemo: "https://out2gether.netlify.app/",
+      github: "https://github.com/LBuddyBoy/out2gether-frontend",
+      icon: TiSocialInstagram,
     },
     {
       slug: "audio-analysis-program",
@@ -33,7 +40,9 @@ export default function Projects() {
       fullDescription:
         "This audio processing project analyzes and manipulates sound using Fourier Transforms. Built with Rust, RustFFT, Rodio, and Slint. Features include real-time spectrogram visualization and interactive effects controls via a GUI.",
       techStack: ["Rust", "Slint", "Git"],
-      icon: "fitness.png",
+      liveDemo: "https://github.com/systems-programming/241-group-project-rafael-elijah-allison-riah-final",
+      github: "https://github.com/systems-programming/241-group-project-rafael-elijah-allison-riah-final",
+      icon: LuAudioLines ,
     },
   ];
 
@@ -85,11 +94,11 @@ export default function Projects() {
                 <div className="project-card card h-100 text-center text-white border-0">
                   <div className="card-body d-flex flex-column align-items-center">
                     <div className="icon-wrapper mb-3">
-                      <img
-                        src={project.icon}
-                        alt={project.name}
-                        className="project-icon"
-                      />
+                    {typeof project.icon === "string" ? (
+                      <img src={project.icon} alt={project.name} />
+                      ) : (
+                      <project.icon size={80} color="#034df9" />
+                    )}
                     </div>
                     <h5 className="card-title fw-bold">{project.name}</h5>
                     <p className="card-text text-white small">
