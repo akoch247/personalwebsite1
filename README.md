@@ -1,5 +1,1 @@
-Inspo: 
-
-https://www.adhamdannaway.com/
-
-https://ryanzwade.com/
+Download the latest release: https://github.com/akoch247/audio-analysis-visualization/releases/download/v1.0.0/audio-analysis-visualization-macos.zip

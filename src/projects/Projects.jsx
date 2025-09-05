@@ -40,6 +40,7 @@ export default function Projects() {
       fullDescription:
         "This audio processing project analyzes and manipulates sound using Fourier Transforms. Built with Rust, RustFFT, Rodio, and Slint. Features include real-time spectrogram visualization and interactive effects controls via a GUI.",
       techStack: ["Rust", "Slint", "Git"],
+      download: "https://github.com/akoch247/audio-analysis-visualization/releases/download/v1.0.0/audio-analysis-visualization-macos.zip",
       github: "https://github.com/akoch247/audio-analysis-visualization",
       icon: LuAudioLines ,
     },
