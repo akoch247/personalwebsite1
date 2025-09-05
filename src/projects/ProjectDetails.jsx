@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./Projects.css";
 import { LuAudioLines } from "react-icons/lu";
@@ -7,6 +8,7 @@ import { TiSocialInstagram } from "react-icons/ti";
 
 export default function ProjectDetails() {
   const { slug } = useParams();
+  const [showVideo, setShowVideo] = useState(false);
 
   const projects = {
     "portfolio-website": {
@@ -32,6 +34,7 @@ export default function ProjectDetails() {
       fullDescription:
         "This audio processing project analyzes and manipulates sound using Fourier Transforms. Built with Rust, RustFFT, Rodio, and Slint. Features include real-time spectrogram visualization and interactive effects controls via a GUI.",
       techStack: ["Rust", "Slint", "Git"],
+      demoVideo: "/videos/demo-video.mp4",
       download: "https://github.com/akoch247/audio-analysis-visualization/releases/download/v1.0.0/audio-analysis-visualization-macos.zip",
       github: "https://github.com/akoch247/audio-analysis-visualization",
       icon: LuAudioLines,
@@ -68,6 +71,16 @@ export default function ProjectDetails() {
             ))}
           </div>
           <div className="d-flex justify-content-center gap-3 mt-4">
+            {project.demoVideo && (
+              <button 
+                className="btn btn-sm btn-primary"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowVideo(true);
+                }}
+              >🎬 Demo Video</button>
+            )}
+
             {project.liveDemo && (
               <a 
               href={project.liveDemo}
@@ -92,6 +105,62 @@ export default function ProjectDetails() {
               className="btn btn-sm btn-primary"
               onClick={(e) => e.stopPropagation()}
             > 💻 Github</a>
+            {showVideo && (
+              <div 
+                className="video-modal"
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  background: "rgba(0,0,0,0.85)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  zIndex: 9999,
+                  flexDirection: "column",
+                  padding: "10px",
+                }}
+              >
+                <button 
+                  onClick={() => setShowVideo(false)}
+                  style={{
+                    alignSelf: "flex-end",
+                    marginBottom: "10px",
+                    background: "transparent",
+                    border: "none",
+                    color: "white",
+                    fontSize: "2rem",
+                    cursor: "pointer",
+                  }}
+                > &times; 
+                </button>
+                <div 
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    overflow: "auto",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <video 
+                    controls
+                    autoPlay
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxWidth: "900px", 
+                      borderRadius: "8px",
+                    }}
+                  >
+                    <source src={project.demoVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            )}
           </div>          
         </div>
       </div>
