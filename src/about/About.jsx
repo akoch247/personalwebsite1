@@ -25,7 +25,7 @@ export default function About() {
                 transition={{ duration: 0.7 }}
                 className="text-center text-lg-start mt-4 mt-lg-0"
             >
-                <h1 className="display-5 text-center text-lg-start">
+                <h1 className="display-5 mx-4">
                     About Me<br />
                 </h1>
                 <p className="mt-3 p-4">
