@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa"; 
 import "./Contact.css";
 
 export default function Contact() {
@@ -70,6 +71,25 @@ export default function Contact() {
             <p className="lead d-flex justify-content-center pb-2">
             I'm seeking opportunities to apply my skills to mission-driven projects—full-time, contract, or freelance.   
             </p>
+            <div className="d-flex justify-content-center align-items-center gap-3">
+                <a 
+                    href="mailto:akoch@oberlin.edu"
+                    className="contact-icon btn btn-primary"
+                    title="Email Me"
+                >
+                    <FaEnvelope size={32} />
+                </a>
+
+                <a 
+                    href="https://www.linkedin.com/in/adrianakoch/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-icon btn btn-primary"
+                    title="LinkedIn Profile"
+                >
+                    <FaLinkedin size={32} />
+                </a>
+            </div>
 
             <div className="d-flex justify-content-center mt-5 mb-5">
                 <form className="card contact-card text-start responsive-form p-4 rounded-4 text-white" onSubmit={handleSubmit}>

@@ -72,3 +72,15 @@ textarea:-webkit-autofill:focus {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius:10%;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
